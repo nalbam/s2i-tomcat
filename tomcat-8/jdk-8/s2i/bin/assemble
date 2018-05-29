@@ -87,15 +87,15 @@ if [ -f "$LOCAL_SOURCE_DIR/$POM_PATH/pom.xml" ]; then
   rm -rf ${DEPLOY_DIR}/*
   echo " cleaned up"
 
+  ls -al ./target
+
   WAR_NAME=${WAR_NAME:="*.war"}
-  WAR_PATH=$(find -name ${WAR_NAME})
+  WAR_PATH=$(find ./target/${WAR_NAME})
 
   if [ ! -f ${WAR_PATH} ]; then
     echo "Aborting due to error : File not found, moving $WAR_PATH file, maybe it doesn't exist"
     exit 1
   fi
-
-  ls -al ./target
 
   echo "Moving built war file $WAR_PATH into $DEPLOY_DIR for later deployment..."
   mv ${WAR_PATH} ${DEPLOY_DIR}/ROOT.war
@@ -107,7 +107,7 @@ if [ -f "$LOCAL_SOURCE_DIR/$POM_PATH/pom.xml" ]; then
 else
 
   WAR_NAME=${WAR_NAME:="*.war"}
-  WAR_PATH=$(find -name ${WAR_NAME})
+  WAR_PATH=$(find ./target/${WAR_NAME})
 
   if [ ! -f ${WAR_PATH} ]; then
     echo "Aborting due to error : File not found, moving $WAR_PATH file, maybe it doesn't exist"
