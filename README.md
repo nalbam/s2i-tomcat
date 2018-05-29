@@ -82,7 +82,7 @@ Image version structure
 2. a dash "-"
 3. Java version - jdk-8
 
-Example: `bespin-sbl/s2i-tomcat:8.5-jdk-8`
+Example: `bespinsbl/s2i-tomcat:8.5-jdk-8`
 
 Environment variables
 ---------------------
