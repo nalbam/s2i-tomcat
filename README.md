@@ -6,8 +6,8 @@ All of that is sampled from [Wildfly openshift s2i project](https://github.com/o
 Supported tags and respective `Dockerfile` links for image [s2i-tomcat](https://hub.docker.com/r/bespinsbl/s2i-tomcat/) 
 --------------------
 
-* `8-jdk-8-mvn-3.5` [(tomcat-8/maven-3.5/jdk-8)](https://github.com/bespin-sbl/s2i-tomcat/blob/master/tomcat-8/maven-3.5/jdk-8/Dockerfile)
-* `8.5-jdk-8-mvn-3.5` [(tomcat-8.5/maven-3.5/jdk-8)](https://github.com/bespin-sbl/s2i-tomcat/blob/master/tomcat-8.5/maven-3.5/jdk-8/Dockerfile)
+* `8-jdk-8` [(tomcat-8/maven-3.5/jdk-8)](https://github.com/bespin-sbl/s2i-tomcat/blob/master/tomcat-8/jdk-8/Dockerfile)
+* `8.5-jdk-8` [(tomcat-8.5/maven-3.5/jdk-8)](https://github.com/bespin-sbl/s2i-tomcat/blob/master/tomcat-8.5/jdk-8/Dockerfile)
 
 This repository contains the source for building various versions of
 the Tomcat application as a reproducible Docker image using
@@ -41,7 +41,7 @@ $ docker pull bespinsbl/s2i-tomcat:$TOMCAT_VERSION-jdk-$JDK_VERSION-mvn-$MAVEN_V
 for example
 
 ```
-$ docker pull bespinsbl/s2i-tomcat:8.5-jdk-8-mvn-3.5 
+$ docker pull bespinsbl/s2i-tomcat:8.5-jdk-8 
 ```
 
 Usage
@@ -51,7 +51,7 @@ using standalone [S2I](https://github.com/openshift/source-to-image) and then ru
 resulting image with [Docker](http://docker.io) execute:
 
 ```
-$ s2i build git://github.com/bespin-sbl/sample-tomcat bespin-sbl/s2i-tomcat:8.5-jdk-8-mvn-3.5 sample-tomcat
+$ s2i build git://github.com/bespin-sbl/sample-tomcat bespin-sbl/s2i-tomcat:8.5-jdk-8 sample-tomcat
 $ docker run -p 8080:8080 sample-tomcat
 ```
 
@@ -83,10 +83,8 @@ Image version structure
 1. Platform version - 8.5
 2. a dash "-"
 3. Java version - jdk-8
-4. a dash "-"
-5. Maven version - mvn-3.5
 
-Example: `bespin-sbl/s2i-tomcat:8.5-jdk-8-mvn-3.5`
+Example: `bespin-sbl/s2i-tomcat:8.5-jdk-8`
 
 Environment variables
 ---------------------

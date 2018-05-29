@@ -4,19 +4,19 @@ MAINTAINER Jungyoul Yu <jungyouol.yu@bespinglobal.com>
 
 EXPOSE 8080
 
-ENV TOMCAT_VERSION=8.5.31 \
+ENV TOMCAT_VERSION=8.0.52 \
     TOMCAT_MAJOR=8 \
     MAVEN_VERSION=3.5.3 \
-    TOMCAT_DISPLAY_VERSION=8.5 \
+    TOMCAT_DISPLAY_VERSION=8 \
     CATALINA_HOME=/tomcat \
     JAVA="java-1.8.0-openjdk java-1.8.0-openjdk-devel" \
     JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8" \
     POM_PATH=.
 
-LABEL io.k8s.description="Platform for building and running Java applications on Apache-Tomcat 8.5.31" \
-      io.k8s.display-name="Apache-Tomcat 8.5.31" \
+LABEL io.k8s.description="Platform for building and running Java applications on Apache-Tomcat 8.0.52" \
+      io.k8s.display-name="Apache-Tomcat 8.0.52" \
       io.openshift.expose-services="8080:http" \
-      io.openshift.tags="builder,tomcat,tomcat8.5" \
+      io.openshift.tags="builder,tomcat,tomcat8" \
       io.openshift.s2i.destination="/opt/s2i/destination"
 
 # Install Maven, Tomcat, Java
@@ -34,10 +34,10 @@ RUN INSTALL_PKGS="tar unzip bc which lsof $JAVA" && \
     mkdir -p /opt/s2i/destination
 
 # Add s2i maven customizations
-ADD ./contrib/settings.xml $HOME/.m2/
+ADD contrib/settings.xml $HOME/.m2/
 
 # Copy the S2I scripts from the specific language image to $STI_SCRIPTS_PATH
-COPY ./s2i/bin/ $STI_SCRIPTS_PATH
+COPY s2i/bin $STI_SCRIPTS_PATH
 
 RUN chown -R 1001:0 /tomcat && chown -R 1001:0 $HOME && \
     chmod -R ug+rwx /tomcat && \
