@@ -4,18 +4,18 @@ MAINTAINER Jungyoul Yu <jungyouol.yu@bespinglobal.com>
 
 EXPOSE 8080
 
-ENV TOMCAT_VERSION=8.5.31 \
+ENV MAVEN_VERSION=3.5.3 \
+    TOMCAT_VERSION=8.5.31 \
     TOMCAT_MAJOR=8 \
-    MAVEN_VERSION=3.5.3 \
-    CATALINA_HOME=/tomcat \
     JAVA="java-1.8.0-openjdk java-1.8.0-openjdk-devel" \
     JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8" \
+    CATALINA_HOME=/tomcat \
     POM_PATH=.
 
 LABEL io.k8s.description="Platform for building and running Java applications on Apache-Tomcat 8.5.31" \
       io.k8s.display-name="Apache-Tomcat 8.5.31" \
       io.openshift.expose-services="8080:http" \
-      io.openshift.tags="builder,tomcat,tomcat8.5" \
+      io.openshift.tags="builder,java,tomcat,tomcat8.5" \
       io.openshift.s2i.destination="/opt/s2i/destination"
 
 # Install Maven, Tomcat, Java
