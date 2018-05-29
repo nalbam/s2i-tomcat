@@ -97,7 +97,7 @@ if [ -f "$LOCAL_SOURCE_DIR/$POM_PATH/pom.xml" ]; then
     exit 1
   fi
 
-  echo "Moving built war file $WAR_PATH into $DEPLOY_DIR for later deployment..."
+  echo "Moving built war file $WAR_PATH into $DEPLOY_DIR/ROOT.war for later deployment..."
   mv ${WAR_PATH} ${DEPLOY_DIR}/ROOT.war
 
   ls -al ${DEPLOY_DIR}
