@@ -3,7 +3,7 @@ Tomcat - CentOS Docker image
 
 All of that is sampled from [Wildfly openshift s2i project](https://github.com/openshift-s2i/s2i-wildfly)
 
-Supported tags and respective `Dockerfile` links for image [s2i-tomcat](https://hub.docker.com/r/bespin-sbl/s2i-tomcat/) 
+Supported tags and respective `Dockerfile` links for image [s2i-tomcat](https://hub.docker.com/r/bespinsbl/s2i-tomcat/) 
 --------------------
 
 * `8-jdk-8-mvn-3.3` [(tomcat-8/maven-3.3/jdk-8)](https://github.com/bespin-sbl/s2i-tomcat/blob/master/tomcat-8/maven-3.3/jdk-8/Dockerfile)
@@ -37,13 +37,13 @@ Installation
 This image is available on DockerHub. To download it, run:
 
 ```
-$ docker pull bespin-sbl/s2i-tomcat:$TOMCAT_VERSION-jdk-$JDK_VERSION-mvn-$MAVEN_VERSION
+$ docker pull bespinsbl/s2i-tomcat:$TOMCAT_VERSION-jdk-$JDK_VERSION-mvn-$MAVEN_VERSION
 ```
 
 for example
 
 ```
-$ docker pull bespin-sbl/s2i-tomcat:8.5-jdk-8-mvn-3.5 
+$ docker pull bespinsbl/s2i-tomcat:8.5-jdk-8-mvn-3.5 
 ```
 
 Usage
