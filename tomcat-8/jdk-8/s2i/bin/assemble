@@ -10,7 +10,7 @@ mkdir -p ${LOCAL_SOURCE_DIR}
 # artifacts (*.war, *.jar)
 ARTIFACT_DIR=${ARTIFACT_DIR:-target}
 
-# Resulting WAR files will be deployed to $CATALINA_HOME/standalone/deployments
+# Resulting WAR files will be deployed to $CATALINA_HOME/webapps
 DEPLOY_DIR=${CATALINA_HOME}/webapps
 mkdir -p ${DEPLOY_DIR}
 
