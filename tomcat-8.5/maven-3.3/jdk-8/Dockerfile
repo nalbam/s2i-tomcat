@@ -3,7 +3,7 @@
 
 FROM openshift/base-centos7
 
-MAINTAINER nalbam <me@nalbam.com>
+MAINTAINER Jungyoul Yu <jungyouol.yu@bespinglobal.com>
 
 EXPOSE 8080
 
