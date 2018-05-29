@@ -6,8 +6,8 @@ All of that is sampled from [Wildfly openshift s2i project](https://github.com/o
 Supported tags and respective `Dockerfile` links for image [s2i-tomcat](https://hub.docker.com/r/bespinsbl/s2i-tomcat/) 
 --------------------
 
-* `8-jdk-8` [(tomcat-8/maven-3.5/jdk-8)](https://github.com/bespin-sbl/s2i-tomcat/blob/master/tomcat-8/jdk-8/Dockerfile)
-* `8.5-jdk-8` [(tomcat-8.5/maven-3.5/jdk-8)](https://github.com/bespin-sbl/s2i-tomcat/blob/master/tomcat-8.5/jdk-8/Dockerfile)
+* `8-jdk-8` [(tomcat-8/jdk-8)](https://github.com/bespin-sbl/s2i-tomcat/blob/master/tomcat-8/jdk-8/Dockerfile)
+* `8.5-jdk-8` [(tomcat-8.5/jdk-8)](https://github.com/bespin-sbl/s2i-tomcat/blob/master/tomcat-8.5/jdk-8/Dockerfile)
 
 This repository contains the source for building various versions of
 the Tomcat application as a reproducible Docker image using
@@ -16,18 +16,17 @@ The resulting image can be run using [Docker](http://docker.io).
 
 Versions
 --------------------
+CentOS versions currently provided are:
+* CentOS 7
+
 Tomcat versions currently provided are:
 * Tomcat v8
 * Tomcat v8.5
-
-CentOS versions currently provided are:
-* CentOS 7
 
 Java versions currently provided are:
 * Openjdk 8
 
 Maven versions currently provided are:
-* Maven 3.3
 * Maven 3.5
 
 Installation
@@ -35,7 +34,7 @@ Installation
 This image is available on DockerHub. To download it, run:
 
 ```
-$ docker pull bespinsbl/s2i-tomcat:$TOMCAT_VERSION-jdk-$JDK_VERSION-mvn-$MAVEN_VERSION
+$ docker pull bespinsbl/s2i-tomcat:$TOMCAT_VERSION-jdk-$JDK_VERSION
 ```
 
 for example
@@ -63,19 +62,18 @@ $ curl 127.0.0.1:8080
 Repository organization
 -----------------------
 * `<Tomcat-version>`
-    * `<Maven-version>`
-        * `<Java-version>`
-            * `Dockerfile`
-                CentOS based Dockerfile
-            * `s2i/bin/`
-                This folder contains scripts that are run by [S2I](https://github.com/openshift/source-to-image):
-                * `assemble`
-                  Build Java Code with Maven.
-                * `run`
-                  Run Apache-Tomcat application server.
-            * `contrib/`
-                * `setting.xml`
-                    A setting.xml file.
+    * `<Java-version>`
+        * `Dockerfile`
+            CentOS based Dockerfile
+        * `s2i/bin/`
+            This folder contains scripts that are run by [S2I](https://github.com/openshift/source-to-image):
+            * `assemble`
+              Build Java Code with Maven.
+            * `run`
+              Run Apache-Tomcat application server.
+        * `contrib/`
+            * `setting.xml`
+                A setting.xml file.
 
 Image version structure
 -----------------------
