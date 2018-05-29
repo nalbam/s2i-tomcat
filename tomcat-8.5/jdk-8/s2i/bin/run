@@ -1,5 +1,5 @@
 #!/bin/bash
 
-CATALINA_HOME=${CATALINA_HOME:"/tomcat"}
+CATALINA_HOME=${CATALINA_HOME:="/tomcat"}
 
 exec ${CATALINA_HOME}/bin/catalina.sh run
