@@ -1,6 +1,3 @@
-# This image provides a base for building and running Apache-Tomcat applications.
-# It builds using maven and runs the resulting artifacts on Apache-Tomcat
-
 FROM openshift/base-centos7
 
 MAINTAINER Jungyoul Yu <jungyouol.yu@bespinglobal.com>
@@ -36,7 +33,7 @@ RUN INSTALL_PKGS="tar unzip bc which lsof $JAVA" && \
     tar -zx --strip-components=1 -C /tomcat) && \
     mkdir -p /opt/s2i/destination
 
-# Add s2i tomcat customizations
+# Add s2i maven customizations
 ADD ./contrib/settings.xml $HOME/.m2/
 
 # Copy the S2I scripts from the specific language image to $STI_SCRIPTS_PATH
