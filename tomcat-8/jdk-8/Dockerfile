@@ -7,7 +7,6 @@ EXPOSE 8080
 ENV TOMCAT_VERSION=8.0.52 \
     TOMCAT_MAJOR=8 \
     MAVEN_VERSION=3.5.3 \
-    TOMCAT_DISPLAY_VERSION=8 \
     CATALINA_HOME=/tomcat \
     JAVA="java-1.8.0-openjdk java-1.8.0-openjdk-devel" \
     JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8" \
