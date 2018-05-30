@@ -89,8 +89,8 @@ if [ -f "$LOCAL_SOURCE_DIR/$POM_PATH/pom.xml" ]; then
 
   ls -al ./target
 
-  WAR_NAME=${WAR_NAME:="*.war"}
-  WAR_PATH=$(find ./target/${WAR_NAME})
+  WAR_NAME=${WAR_NAME:="./target/*.war"}
+  WAR_PATH=$(find ${WAR_NAME})
 
   if [ ! -f ${WAR_PATH} ]; then
     echo "Aborting due to error : File not found, moving $WAR_PATH file, maybe it doesn't exist"
@@ -106,8 +106,8 @@ if [ -f "$LOCAL_SOURCE_DIR/$POM_PATH/pom.xml" ]; then
 
 else
 
-  WAR_NAME=${WAR_NAME:="*.war"}
-  WAR_PATH=$(find ./target/${WAR_NAME})
+  WAR_NAME=${WAR_NAME:="./target/*.war"}
+  WAR_PATH=$(find ${WAR_NAME})
 
   if [ ! -f ${WAR_PATH} ]; then
     echo "Aborting due to error : File not found, moving $WAR_PATH file, maybe it doesn't exist"
