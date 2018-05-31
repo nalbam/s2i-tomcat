@@ -9,7 +9,7 @@ ENV MAVEN_VERSION=3.5.3 \
     TOMCAT_VERSION=8.0.52 \
     TOMCAT_MAJOR=8 \
     JAVA="java-1.8.0-openjdk java-1.8.0-openjdk-devel" \
-    JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8 -Duser.home=/apps/home" \
+    JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8 -Duser.home=$HOME" \
     CATALINA_HOME=/tomcat \
     POM_PATH=.
 
