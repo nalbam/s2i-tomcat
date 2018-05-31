@@ -19,19 +19,11 @@
                     <id>central</id>
                     <url>https://repo1.maven.org/maven2/</url>
                 </repository>
-                <repository>
-                    <id>jcenter</id>
-                    <url>https://jcenter.bintray.com/</url>
-                </repository>
             </repositories>
             <pluginRepositories>
                 <pluginRepository>
                     <id>central</id>
                     <url>https://repo1.maven.org/maven2/</url>
-                </pluginRepository>
-                <pluginRepository>
-                    <id>jcenter</id>
-                    <url>https://jcenter.bintray.com/</url>
                 </pluginRepository>
             </pluginRepositories>
         </profile>
