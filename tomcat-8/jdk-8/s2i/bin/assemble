@@ -87,8 +87,6 @@ if [ -f "$LOCAL_SOURCE_DIR/$POM_PATH/pom.xml" ]; then
   rm -rf ${DEPLOY_DIR}/*
   echo " cleaned up"
 
-  ls -al ./target
-
   WAR_NAME=${WAR_NAME:="./target/*.war"}
   WAR_PATH=$(find ${WAR_NAME})
 
